@@ -1,0 +1,75 @@
+# Import the necessary modules
+import MusicLibrary
+import random
+
+# Define actions for testing the MusicLibrary class
+actions MusicLibrary:
+    # Instantiate the MusicLibrary class
+    @constructor
+    def create_library():
+        return MusicLibrary()
+
+    # Add a track to the library
+    def add_track(library, title, artist, album, genre, year=None):
+        track = Track(title, artist, album, genre, year)
+        return library.add_track(track)
+
+    # Remove a track from the library
+    def remove_track(library, title):
+        return library.remove_track(title)
+
+    # Find tracks by artist
+    def find_by_artist(library, artist):
+        return library.find_by_artist(artist)
+
+    # Find tracks by album
+    def find_by_album(library, album):
+        return library.find_by_album(album)
+
+    # List all tracks in the library
+    def list_tracks(library):
+        return library.list_tracks()
+
+    # Categorize tracks by genre
+    def categorize_by_genre(library):
+        return library.categorize_by_genre()
+
+    # Search for tracks by keyword
+    def search_tracks(library, keyword):
+        return library.search_tracks(keyword)
+
+    # Update track information
+    def update_track_info(library, title, **kwargs):
+        return library.update_track_info(title, **kwargs)
+
+    # Sort tracks by title
+    def sort_tracks_by_title(library):
+        return library.sort_tracks_by_title()
+
+    # Sort tracks by artist
+    def sort_tracks_by_artist(library):
+        return library.sort_tracks_by_artist()
+
+    # Sort tracks by album
+    def sort_tracks_by_album(library):
+        return library.sort_tracks_by_album()
+
+    # Sort tracks by year
+    def sort_tracks_by_year(library):
+        return library.sort_tracks_by_year()
+
+    # Find tracks by year
+    def find_by_year(library, year):
+        return library.find_by_year(year)
+
+    # Count the number of tracks in the library
+    def count_tracks(library):
+        return library.count_tracks()
+
+    # Export the library to a file
+    def export_library(library, filename):
+        return library.export_library(filename)
+
+    # Import a library from a file
+    def import_library(library, filename):
+        return library.import_library(filename)
